@@ -3,8 +3,8 @@ class AutoPicture {
     constructor(prop) {
         this.defaultOptions = {
             src: prop.src,
-            type: prop.type,
-            className: prop.className,
+            type: '.' + prop.type,
+            classname: prop.classname || 'image-fluid',
             element: prop.element,
             start: prop.start || 0,
             end: prop.end,
@@ -25,9 +25,9 @@ class AutoPicture {
             img.src = this.defaultOptions.src + i + this.defaultOptions.type;
             //防止图片间隔出现白线
             img.style.display = 'block';
-            img.className = this.defaultOptions.className;
+            img.classname = this.defaultOptions.classname;
             //设定容器data
-            div.className = 'items';
+            div.classname = 'items';
             div.style.margin = '0';
             div.style.padding = '0';
             //容器添加img
