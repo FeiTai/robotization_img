@@ -4,8 +4,8 @@ class AutoPicture {
         this.defaultOptions = {
             src: prop.src,
             type: '.' + prop.type,
-            classname: prop.classname || 'image-fluid',
-            element: prop.element,
+            name: prop.name || 'image-fluid',
+            mountElement: prop.mountElement,
             start: prop.start || 0,
             end: prop.end,
         }
@@ -25,9 +25,9 @@ class AutoPicture {
             img.src = this.defaultOptions.src + i + this.defaultOptions.type;
             //防止图片间隔出现白线
             img.style.display = 'block';
-            img.classname = this.defaultOptions.classname;
+            img.className = this.defaultOptions.name;
             //设定容器data
-            div.classname = 'items';
+            div.className = 'items';
             div.style.margin = '0';
             div.style.padding = '0';
             //容器添加img
@@ -35,6 +35,6 @@ class AutoPicture {
             AutoPicture.frag.appendChild(div);
         }
         //添加到父元素
-        this.defaultOptions.element.appendChild(AutoPicture.frag);
+        this.defaultOptions.mountElement.appendChild(AutoPicture.frag);
     }
 }

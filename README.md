@@ -13,12 +13,11 @@
 2.调用
 
 ```javascript
-let imgobject = new AutoPicture({
-    src: './images/',
-    type: 'jpg',
-    element: document.getElementsByClassName('container')[0],
-    start: 0,
-    end: 5
+let image_object =new AutoPicture({
+    src:'./images/',
+    type:'jpg',
+    mountElement:document.getElementsByClassName('container')[0],
+    end: 10
 })
 ```
 
@@ -28,9 +27,9 @@ let imgobject = new AutoPicture({
 
 `type`:图片类型( jpg | png | gif )
 
-`classname`:img-类名，参数默认为img-fluid,可不传参
+`name`:img-类名，参数默认为img-fluid,可不传参
 
-`element`:挂载的父容器
+`mountElement`:挂载的父容器
 
 `start`:无参数默认为0
 
