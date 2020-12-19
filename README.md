@@ -13,7 +13,7 @@
 2.调用
 
 ```javascript
-let image_object = new AutoPicture({
+let autopic = new AutoPicture({
     src: './images/',
     type: 'jpg',
     mountElement: document.getElementsByClassName('container')[0],
