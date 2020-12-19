@@ -4,7 +4,7 @@ class AutoPicture {
         this.defaultOptions = {
             src: prop.src,
             type: '.' + prop.type,
-            name: prop.name || 'image-fluid',
+            name: prop.name || 'img-fluid',
             mountElement: prop.mountElement,
             start: prop.start || 0,
             end: prop.end,

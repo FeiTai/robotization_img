@@ -1,6 +1,6 @@
 # auto_create_image
 
-使用场景移动端（PC）： 展示多数量图片时，无需手动创建img标签
+针对移动端： 展示多数量图片时，无需手动创建img标签
 
 使用方法:
 
@@ -13,26 +13,26 @@
 2.调用
 
 ```javascript
-let image_object =new AutoPicture({
-    src:'./images/',
-    type:'jpg',
-    mountElement:document.getElementsByClassName('container')[0],
+let image_object = new AutoPicture({
+    src: './images/',
+    type: 'jpg',
+    mountElement: document.getElementsByClassName('container')[0],
     end: 10
 })
 ```
 
 3.参数解释:
 
-`src`:图片路径
+`src`:图片路径(必填项)
 
-`type`:图片类型( jpg | png | gif )
+`type`:图片类型( jpg | png | gif )(必填项)
 
-`name`:img-类名，参数默认为img-fluid,可不传参
+`name`:传入标签类名，参数默认为img-fluid(搭配bootstrap)(可选)
 
-`mountElement`:挂载的父容器
+`mountElement`:挂载的父容器(必填)
 
-`start`:无参数默认为0
+`start`:默认参数:0(可选)
 
-`end` : 填入路径图片数量(文件夹图片有多少张，就填多少)
+`end` : 生成图片数量(必填)
 
-文件夹的图片要更名,从0开始排序
+exp:对于图片排序，切片时从0开始命名
